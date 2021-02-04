@@ -5,9 +5,9 @@ namespace Buyosell.Data
     public class BuyosellContext : DbContext
     {
 
-        private const string _connectionString = @"Host=ec2-50-16-108-254.compute-1.amazonaws.com;Database=d73tuh4fkj2i9a;
-                                                sslmode=Prefer;Trust Server Certificate=true; Port=5432;
-                                                Username=ccaildkjuxcmft;Password=10456f6e6a9dedaebf5e19b10071994bed99c52bce7699ba19e6f8e9f7294444";
+        private const string _connectionString = @"Host={your host};Database={your Database};
+                                                sslmode=Prefer;Trust Server Certificate=true; Port={your port};
+                                                Username={your username};Password={your password}";
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
             => options.UseNpgsql(_connectionString);
