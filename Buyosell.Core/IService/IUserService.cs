@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Buyosell.Core.Models;
 
-namespace Buyocell.Core.Services
+namespace Buyocell.Core.IService
 {
     public interface IUserService {
         Task CreateAd(long userId,Ad ad);

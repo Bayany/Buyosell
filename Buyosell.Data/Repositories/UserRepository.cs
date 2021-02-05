@@ -3,7 +3,7 @@ using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using Buyosell.Data;
 using Buyosell.Core.Models;
-using Buyosell.Core.Repositories;
+using Buyosell.Core.IRepository;
 using System.Threading.Tasks;
 using System;
 

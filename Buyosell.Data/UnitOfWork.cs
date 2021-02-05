@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 using Buyosell.Core;
-using Buyosell.Core.Repositories;
+using Buyosell.Core.IRepository;
 using Buyosell.Data.Repositories;
 
 namespace Buyosell.Data
