@@ -1,6 +1,6 @@
 using Buyosell.Core.Models;
 
-namespace Buyosell.Core.Categories
+namespace Buyosell.Core.Models.Categories
 {
     class Clothes : Category
     {
