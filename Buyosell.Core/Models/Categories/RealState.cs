@@ -1,5 +1,3 @@
-using Buyosell.Core.Models;
-
 namespace Buyosell.Core.Models.Categories
 {
     class RealState : Category
