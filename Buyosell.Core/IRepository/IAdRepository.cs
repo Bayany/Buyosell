@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Buyosell.Core.Models;
 
-namespace Buyosell.Core.Repositories
+namespace Buyosell.Core.IRepository
 {
     public interface IAdRepository
     {

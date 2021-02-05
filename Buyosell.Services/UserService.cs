@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Buyocell.Core.Services;
+using Buyocell.Core.IService;
 using Buyosell.Core;
 using Buyosell.Core.Models;
 
