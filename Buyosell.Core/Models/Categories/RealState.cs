@@ -8,5 +8,6 @@ namespace Buyosell.Core.Categories
         public bool hasElevator {get; set;}
         public string BArea {get; set;}
         public string  BFloorNumber {get; set;}
+        public string RoomCount {get; set;}
     }
 }
