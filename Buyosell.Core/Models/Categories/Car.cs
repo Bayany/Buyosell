@@ -1,15 +1,15 @@
 namespace Buyosell.Core.Models.Categories
 {
-    class Car : Category
+    public class Car : Category
     {
         public Car()
         {
             base.Name = "Car";
         }
 
-        public string CarManufacturer { get; set; }
-        public string CarModel { get; set; }
-        public string CarColor { get; set; }
-        public string CarPYear { get; set; }
+        public string Manufacturer { get; set; }
+        public string Model { get; set; }
+        public string Color { get; set; }
+        public string PYear { get; set; }
     }
 }

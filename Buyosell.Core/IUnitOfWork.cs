@@ -6,8 +6,8 @@ namespace Buyosell.Core
 {
     public interface IUnitOfWork : IDisposable
     {
-        IUserRepository UserFeed { get; }
-        IAdRepository AdWall { get; }
+        IUserRepository Users { get; }
+        IAdRepository Ads { get; }
         Task CommitAsync();
     }
 }

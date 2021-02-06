@@ -1,15 +1,15 @@
 namespace Buyosell.Core.Models.Categories
 {
-    class Clothes : Category
+    public class Clothes : Category
     {
         public Clothes()
         {
             base.Name = "Clothes";
         }
 
-        public string ClothesBrand { get; set; }
-        public bool ClothesType { get; set; }
-        public string ClothesColor { get; set; }
-        public string ClothesSize { get; set; }
+        public string Brand { get; set; }
+        public bool Type { get; set; }
+        public string Color { get; set; }
+        public string Size { get; set; }
     }
 }

@@ -1,7 +1,7 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Buyocell.Core.IService;
+using Buyosell.Core.IService;
 using Buyosell.Core;
 using Buyosell.Core.Models;
 
@@ -16,27 +16,17 @@ namespace Buyosell.Services
         }
         public async Task<Ad> GetAdByID(long adId)
         {
-            return await _unitOfWork.AdWall.GetAdByIdAsync(adId);
+            return await _unitOfWork.Ads.GetAdByIdAsync(adId);
         }
 
-        public async Task<List<Ad>> GetAdsByCategory(Category category)
+        public async Task BookmarkAd(long userId, long adId)
         {
-           return await _unitOfWork.AdWall.GetAdsByCategoryAsync(category);
+            await _unitOfWork.Users.BookmarkAdAsync(userId, adId);
+        }
+        public async Task UnBookmarkAd(long userId, long adId)
+        {
+            await _unitOfWork.Users.UnBookmarkAdAsync(userId, adId);
         }
 
-        public async Task<List<Ad>> GetAdsByCity(City city)
-        {
-             return await _unitOfWork.AdWall.GetAdsByCityAsync(city);
-        }
-
-        public async Task<List<Ad>> FilterAds(long minPrice, long maxPrice)
-        {
-             return await _unitOfWork.AdWall.FilterAdsAsync(minPrice,maxPrice);
-        }
-
-        public async Task<List<Ad>> SearchAds(string query, City city, Category category = null)
-        {
-             return await _unitOfWork.AdWall.SearchAdsAsync(query,city,category);
-        }
     }
 }

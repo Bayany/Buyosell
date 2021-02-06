@@ -39,15 +39,14 @@ namespace Buyosell.Data.Repositories
         {
             return await _context.Ads.Where(ad => ad.Category == category).ToListAsync();
         }
-        public async Task<List<Ad>> FilterAdsAsync(long minPrice, long maxPrice)
+        public List<Ad> FilterAdsAsync(List<Ad> ads,string price)
         {
-            return await _context.Ads.Where(ad => minPrice <= ad.Price && ad.Price <= maxPrice).ToListAsync();
+            long [] range= price.Split("-").Select(x=>long.Parse(x)).ToArray();
+            return ads.Where(ad => range[0] <= ad.Price && ad.Price <=  range[1] ).ToList();
         }
-        public async Task<List<Ad>> SearchAdsAsync(string query, City city, Category category = null)
+        public List<Ad> SearchAdsAsync(List<Ad> ads,string query)
         {
-            List<Ad> resAds = await GetAdsByCityAsync(city);
-            List<Ad> foundedAds = resAds.Where(ad => ad.Title.Contains(query)).ToList();
-            return(category != null)? foundedAds : foundedAds.Where(ad => ad.Category == category).ToList();
+            return ads.Where(ad => ad.Title.Contains(query)).ToList();
         }
         public async Task InsertAdAsync(Ad ad)
         {

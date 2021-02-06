@@ -16,9 +16,8 @@ namespace Buyosell.Data
             this._context = context;
         }
 
-        public IUserRepository UserFeed => _userRepository = _userRepository ?? new UserRepository(_context);
-
-        public IAdRepository AdWall => _adRepository = _adRepository ?? new AdRepository(_context);
+        public IUserRepository Users => _userRepository = _userRepository ?? new UserRepository(_context);
+        public IAdRepository Ads => _adRepository = _adRepository ?? new AdRepository(_context);
 
         public async Task CommitAsync()
         {

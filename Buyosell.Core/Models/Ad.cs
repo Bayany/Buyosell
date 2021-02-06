@@ -1,11 +1,21 @@
 using System;
-
+using System.ComponentModel;
 
 namespace Buyosell.Core.Models
 {
     public enum City
     {
-        Tehran, Isfahan, Mashhad, Shiraz
+        [Description("Tehran")]
+        Tehran,
+
+        [Description("Isfahan")]
+        Isfahan,
+
+        [Description("Mashhad")]
+        Mashhad,
+
+        [Description("Shiraz")]
+        Shiraz
     }
     public class Ad
     {
@@ -16,6 +26,6 @@ namespace Buyosell.Core.Models
         public long Price { get; set; }
         public City City { get; set; }
         public DateTime PublishedDate { get; set; }
-        public Category Category { get; set; }
+        public virtual Category Category { get; set; }
     }
 }

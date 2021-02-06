@@ -10,8 +10,8 @@ namespace Buyosell.Core.IRepository
         Task<List<Ad>> GetAllAdsAsync();
         Task<List<Ad>> GetAdsByCityAsync(City city);
         Task<List<Ad>> GetAdsByCategoryAsync(Category category);
-        Task<List<Ad>> FilterAdsAsync(long minPrice, long maxPrice);
-        Task<List<Ad>> SearchAdsAsync(string query, City city, Category category=null);
+        List<Ad> FilterAdsAsync(List<Ad>ads, string price);
+        List<Ad> SearchAdsAsync(List<Ad> ads,string query);
         Task DeleteAdAsync(long adId);
         Task CommitAsync();
     }

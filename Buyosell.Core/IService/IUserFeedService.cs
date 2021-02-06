@@ -2,14 +2,11 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Buyosell.Core.Models;
 
-namespace Buyocell.Core.IService
+namespace Buyosell.Core.IService
 {
-    public interface IUserService {
+    public interface IUserFeedService {
         Task CreateAd(long userId,Ad ad);
-        Task DeleteAd(long userId,Ad ad);
-        Task BookmarkAd(long userId,Ad ad);
-        Task UnBookmarkAd(long userId,Ad ad);
-
+        Task DeleteAd(long userId,long adId);
         Task<List<Ad>> GetWhishlist(long userId);
         Task<List<Ad>> GetPublishedAds(long userId);
 

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
-namespace Buyosell.Migrations
+namespace Buyosell.Data.Migrations
 {
     [DbContext(typeof(BuyosellContext))]
     partial class BuyosellContextModelSnapshot : ModelSnapshot
@@ -68,8 +68,8 @@ namespace Buyosell.Migrations
                         .HasColumnType("bigint")
                         .UseIdentityByDefaultColumn();
 
-                    b.Property<long>("Title")
-                        .HasColumnType("bigint");
+                    b.Property<string>("Name")
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
 

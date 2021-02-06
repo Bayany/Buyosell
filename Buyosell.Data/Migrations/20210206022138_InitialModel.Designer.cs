@@ -7,11 +7,11 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
-namespace Buyosell.Migrations
+namespace Buyosell.Data.Migrations
 {
     [DbContext(typeof(BuyosellContext))]
-    [Migration("20210204052823_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20210206022138_InitialModel")]
+    partial class InitialModel
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -70,8 +70,8 @@ namespace Buyosell.Migrations
                         .HasColumnType("bigint")
                         .UseIdentityByDefaultColumn();
 
-                    b.Property<long>("Title")
-                        .HasColumnType("bigint");
+                    b.Property<string>("Name")
+                        .HasColumnType("text");
 
                     b.HasKey("Id");
 
